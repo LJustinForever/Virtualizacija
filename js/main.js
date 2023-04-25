@@ -33,6 +33,7 @@ function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, pan
 
 addInfospotToPan(4662.39, -1122.05, 1393.41, "Kamera", "#popup_camera", panorama2)
 addInfospotToPan(-1529.66, -294.72, -4747.44, "Tušinukas", "#popup_pen", panorama2)
+addInfospotToPan(2490.00, 523.06, 4299.84, "Knyga", "#popup_book", panorama3)
 
 
 const viewer = new PANOLENS.Viewer({
