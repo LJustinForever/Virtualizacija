@@ -23,11 +23,17 @@ var movementPositions = [
     new THREE.Vector3(0, -2000, 2500),
     
   ];
-var camera_infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
-camera_infospot.position.set( 4662.39, -1122.05, 1393.41 );
-//camera_infospot.addHoverElement(document.querySelector('#camera-desc-container'), 200 );
-camera_infospot.addEventListener( 'click', function(){ window.location.href = "#popup1"; });
-panorama2.add(camera_infospot);
+function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, panorama){
+  var infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+  infospot.position.set( positionX, positionY, positionZ );
+  infospot.addHoverText(hoverText);
+  infospot.addEventListener( 'click', function(){ window.location.href = popup; });
+  panorama.add(infospot);
+}
+
+addInfospotToPan(4662.39, -1122.05, 1393.41, "Kamera", "#popup_camera", panorama2)
+addInfospotToPan(-1529.66, -294.72, -4747.44, "Tušinukas", "#popup_pen", panorama2)
+
 
 const viewer = new PANOLENS.Viewer({
     container: imageContainer,
