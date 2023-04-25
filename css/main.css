@@ -1,39 +1,123 @@
-body{
+body {
     margin: 0;
     overflow: hidden;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.tour{
-    background: #074357;
+
+.tour {
+    background: #412c2f;
     height: 100vh;
     margin: 0;
 }
 
-h2{
+h2 {
     margin: 0;
     color: white;
 }
-.tour__head{
+
+.tour__head {
     padding-top: 10vh;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.image-container{
+.image-container {
     height: 26.190rem;
-
     position: relative;
     width: 78%;
     display: block;
     margin: 0 auto;
     margin-left: 12%;
     overflow: hidden;
-    
-  border: 2px solid #ebb47a;
-  border-radius: 10px;
+
+    border: 2px solid #ebb47a;
+    border-radius: 10px;
 }
 
-canvas{
+canvas {
     width: 100%;
 }
+
+#camera-desc-container {
+    max-width: 500px;
+    max-height: 500px;
+    min-width: 200px;
+    min-height: 250px;
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#camera-desc-container >iframe {
+    border: none;
+    width: 100%;
+}
+
+.image-contain {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
