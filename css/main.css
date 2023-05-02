@@ -146,3 +146,14 @@ iframe {
   outline: none;
   padding: 32px;
 }
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* adjust as needed */
+}
+
+.button-row button {
+  margin: 0 10px; /* adjust as needed */
+}

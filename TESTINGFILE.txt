@@ -1,5 +1,0 @@
-[2023-05-02 19:55:51.271] [INFO] Activating extension
-[2023-05-02 19:55:51.277] [INFO] Activation finished
-[2023-05-02 19:57:50.599] [INFO] Deactivating extension
-[2023-05-02 19:57:57.616] [INFO] Activating extension
-[2023-05-02 19:57:57.618] [INFO] Activation finished

@@ -1,3 +1,12 @@
+class CustomInfospot {
+  constructor(name, infospot, is_visable) {
+    this.name = name;
+    this.infospot = infospot;
+    this.is_visable = is_visable;
+  }
+}
+var infospotList = []
+
 function toggleSound() {
   var audio = document.getElementById("myAudio");
   var soundIcon = document.getElementById("soundIcon");
@@ -13,6 +22,18 @@ function toggleSound() {
   }
 }
 
+function toggleInfospot(key){
+  infospotList.forEach(c_info => {
+    if (c_info.is_visable && c_info.name != key) {
+      c_info.infospot.hide()
+    }
+    else{
+      c_info.infospot.show()
+    }
+
+  });
+}
+
 const panorama = new PANOLENS.ImagePanorama('images/pan1.jpg');
 const panorama2 = new PANOLENS.ImagePanorama('images/pan2.jpg');
 const panorama3 = new PANOLENS.ImagePanorama('images/pan3.jpg');
@@ -21,6 +42,7 @@ const panorama5 = new PANOLENS.ImagePanorama('images/pan5.jpg');
 const panorama6 = new PANOLENS.ImagePanorama('images/pan6.jpg');
 const panorama7 = new PANOLENS.ImagePanorama('images/pan7.jpg');
 const panorama8 = new PANOLENS.ImagePanorama('images/pan8.jpg');
+
 
 var imageContainer = document.querySelector('.image-container');
 var movementPositions = [
@@ -45,6 +67,8 @@ function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, pan
   infospot.addHoverText(hoverText);
   infospot.addEventListener('click', function () { window.location.href = popup; });
   panorama.add(infospot);
+  var c_infospot = new CustomInfospot(hoverText, infospot, true);
+  infospotList.push(c_infospot);
 }
 
 addInfospotToPan(4662.39, -1122.05, 1393.41, "Kamera", "#popup_camera", panorama2)
@@ -55,7 +79,8 @@ addInfospotToPan(2490.00, 523.06, 4299.84, "Knyga", "#popup_book", panorama3)
 const viewer = new PANOLENS.Viewer({
   container: imageContainer,
   controlBar: true,
-  output: 'overlay'
+  output: 'overlay',  
+  autoHideInfospot: false
 });
 
 panorama.link(panorama2, movementPositions[0]);
