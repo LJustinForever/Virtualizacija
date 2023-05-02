@@ -1,4 +1,19 @@
-const panorama = new PANOLENS.ImagePanorama( 'images/pan1.jpg' );
+function toggleSound() {
+  var audio = document.getElementById("myAudio");
+  var soundIcon = document.getElementById("soundIcon");
+
+  if (audio.paused) {
+    audio.play();
+    soundIcon.classList.remove('fa', 'fa-volume-off', 'fa-lg');
+    soundIcon.classList.add('fa', 'fa-volume-up', 'fa-lg');
+  } else {
+    audio.pause();
+    soundIcon.classList.remove('fa', 'fa-volume-up', 'fa-lg');
+    soundIcon.classList.add('fa', 'fa-volume-off', 'fa-lg');
+  }
+}
+
+const panorama = new PANOLENS.ImagePanorama('images/pan1.jpg');
 const panorama2 = new PANOLENS.ImagePanorama('images/pan2.jpg');
 const panorama3 = new PANOLENS.ImagePanorama('images/pan3.jpg');
 const panorama4 = new PANOLENS.ImagePanorama('images/pan4.jpg');
@@ -9,25 +24,26 @@ const panorama8 = new PANOLENS.ImagePanorama('images/pan8.jpg');
 
 var imageContainer = document.querySelector('.image-container');
 var movementPositions = [
-    //  3000 left -2000 down -2000 in front
-    //1
-    new THREE.Vector3(4000, -2000, -100),
-    new THREE.Vector3(-4000, -2000, 0),
-    new THREE.Vector3(4000, -2000, -500),
-    new THREE.Vector3(2000, -2000, -2000),
-    new THREE.Vector3(-2000, -2000, 2000),
-    new THREE.Vector3(2500, -2000, 1500),
-    new THREE.Vector3(250, -2000, -3000),
-    new THREE.Vector3(3000, -2000, 1000),
-    new THREE.Vector3(-1000, -2000, -2000),
-    new THREE.Vector3(0, -2000, 2500),
-    
-  ];
-function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, panorama){
-  var infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
-  infospot.position.set( positionX, positionY, positionZ );
+  //  3000 left -2000 down -2000 in front
+  //1
+  new THREE.Vector3(4000, -2000, -100),
+  new THREE.Vector3(-4000, -2000, 0),
+  new THREE.Vector3(4000, -2000, -500),
+  new THREE.Vector3(2000, -2000, -2000),
+  new THREE.Vector3(-2000, -2000, 2000),
+  new THREE.Vector3(2500, -2000, 1500),
+  new THREE.Vector3(250, -2000, -3000),
+  new THREE.Vector3(3000, -2000, 1000),
+  new THREE.Vector3(-1000, -2000, -2000),
+  new THREE.Vector3(0, -2000, 2500),
+
+];
+
+function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, panorama) {
+  var infospot = new PANOLENS.Infospot(350, PANOLENS.DataImage.Info);
+  infospot.position.set(positionX, positionY, positionZ);
   infospot.addHoverText(hoverText);
-  infospot.addEventListener( 'click', function(){ window.location.href = popup; });
+  infospot.addEventListener('click', function () { window.location.href = popup; });
   panorama.add(infospot);
 }
 
@@ -37,20 +53,20 @@ addInfospotToPan(2490.00, 523.06, 4299.84, "Knyga", "#popup_book", panorama3)
 
 
 const viewer = new PANOLENS.Viewer({
-    container: imageContainer,
-    controlBar: true,
-    output: 'overlay'
+  container: imageContainer,
+  controlBar: true,
+  output: 'overlay'
 });
 
-panorama.link( panorama2, movementPositions[0]);
-panorama2.link( panorama, movementPositions[1]);
-panorama2.link( panorama5, movementPositions[2]);
-panorama5.link( panorama2, movementPositions[3]);
-panorama5.link( panorama4, movementPositions[4]);
-panorama4.link( panorama5, movementPositions[5]);
-panorama4.link( panorama3, movementPositions[6]);
-panorama3.link( panorama4, movementPositions[7]);
-panorama3.link( panorama2, movementPositions[8]);
-panorama2.link( panorama3, movementPositions[9]);
+panorama.link(panorama2, movementPositions[0]);
+panorama2.link(panorama, movementPositions[1]);
+panorama2.link(panorama5, movementPositions[2]);
+panorama5.link(panorama2, movementPositions[3]);
+panorama5.link(panorama4, movementPositions[4]);
+panorama4.link(panorama5, movementPositions[5]);
+panorama4.link(panorama3, movementPositions[6]);
+panorama3.link(panorama4, movementPositions[7]);
+panorama3.link(panorama2, movementPositions[8]);
+panorama2.link(panorama3, movementPositions[9]);
 
-viewer.add( panorama,panorama2,panorama5, panorama4, panorama3 );
+viewer.add(panorama, panorama2, panorama5, panorama4, panorama3);
