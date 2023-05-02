@@ -9,6 +9,7 @@ body {
   background: #412c2f;
   height: 100vh;
   margin: 0;
+  overflow: auto;
 }
 
 h2 {
