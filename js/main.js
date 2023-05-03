@@ -5,7 +5,23 @@ class CustomInfospot {
     this.is_visable = is_visable;
   }
 }
-var infospotList = []
+var infospotList = [];
+var showGamefunctions = false;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const game = urlParams.get('game')
+
+if (game == "true"){
+  // alert("Working");
+  document.getElementById("endGameButton").style.display = "block";
+  document.getElementById("gameButton").style.display = "none";
+  
+}
+else{
+  document.getElementById("gameButton").style.display = "block";
+  document.getElementById("endGameButton").style.display = "none";
+  
+}
 
 function toggleSound() {
   var audio = document.getElementById("myAudio");
@@ -32,6 +48,17 @@ function toggleInfospot(key){
     }
 
   });
+}
+
+function reloadPageWithGame(){
+  showGamefunctions = true;
+  // alert("Get ready");
+  location.href = location.href + "?game=true";
+}
+
+function reloadPage(){
+  window.history.pushState({}, document.title, window.location.pathname);
+  window.location.reload();
 }
 
 const panorama = new PANOLENS.ImagePanorama('images/pan1.jpg');
