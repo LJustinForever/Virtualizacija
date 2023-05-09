@@ -6,64 +6,6 @@ class CustomInfospot {
   }
 }
 var infospotList = [];
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const game = urlParams.get('game');
-const guessedArray = [];
-const wantedArray = ["pen", "book", "camera"];
-let counter = 0;
-let guessedCounter = 0;
-
-if (game == "true"){
-  // alert("Working");
-  document.getElementById("endGameButton").style.display = "block";
-  document.getElementById("gameButton").style.display = "none";
-  for (let i = 1; i < 4; i++){
-    document.getElementById("guessButton"+i).style.display = "block";
-  }
-  
-}
-else{
-  document.getElementById("gameButton").style.display = "block";
-  document.getElementById("endGameButton").style.display = "none";
-  for (let i = 1; i < 4; i++){
-    document.getElementById("guessButton"+i).style.display = "none";
-  }
-}
-
-// this is where fun begins
-function dummy(guessedItem){
-  if(guessedItem == wantedArray[guessedCounter]){
-    guessedArray[guessedCounter] = guessedItem;
-    guessedCounter++;
-    if(guessedCounter == 3){
-      alert("You won!!!");
-      window.history.pushState({}, document.title, window.location.pathname);
-      window.location.reload();
-    }
-    else{
-      switch (guessedCounter){
-        case 1:
-          alert("second riddle");
-          break;
-        case 2:
-          alert("third riddle");
-      }
-
-    }
-  }
-  else{
-    counter++;
-    if (counter == 3){
-      alert("game over :( ");
-      window.history.pushState({}, document.title, window.location.pathname);
-      window.location.reload();
-    }
-    else {
-      alert("Wrong guess. Errors made : " + counter);
-    }
-  }
-}
 
 function toggleSound() {
   var audio = document.getElementById("myAudio");
@@ -90,17 +32,6 @@ function toggleInfospot(key){
     }
 
   });
-}
-
-function reloadPageWithGame(){
-  // alert("Get ready");
-  window.history.pushState({}, document.title, window.location.pathname);
-  location.href = location.href + "?game=true";
-}
-
-function reloadPage(){
-  window.history.pushState({}, document.title, window.location.pathname);
-  window.location.reload();
 }
 
 const panorama = new PANOLENS.ImagePanorama('images/pan1.jpg');

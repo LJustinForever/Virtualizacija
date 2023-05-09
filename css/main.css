@@ -6,7 +6,7 @@ body {
 }
 
 .tour {
-  background: #412c2f;
+  background: #6f1272;
   height: 100vh;
   margin: 0;
   overflow: auto;
@@ -18,8 +18,8 @@ h2 {
 }
 
 .tour__head {
-  padding-top: 5vh;
-  text-align: center;
+  padding-top: 1px;
+  text-align: left;
   margin-bottom: 50px;
 }
 
@@ -144,13 +144,32 @@ iframe {
   overflow: hidden;
   outline: none;
   padding: 32px;
+  float : right;
+}
+
+#title {
+  padding: 32px;
+  color:rgba(0, 0, 0, 0.7);
+}
+
+.top-nav{
+  background-color: #fff;
+  margin-bottom: 200px;
+}
+
+.g-but{
+  padding:20px;
+  border-radius:40px;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
 }
 
 .button-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* adjust as needed */
+  margin-top: 50px; /* adjust as needed */
 }
 
 .button-row button {
