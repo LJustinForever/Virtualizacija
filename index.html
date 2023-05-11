@@ -56,7 +56,7 @@
                     urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
                 </div>
                 <div class="button-row">
-                    <button id="guessButton1" onclick="dummy('camera')"  class="btn">
+                    <button class="guessButton" id="guessButton1" onclick="dummy('camera')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -79,7 +79,7 @@
                     urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
                 </div>
                 <div class="button-row">
-                    <button id="guessButton2" onclick="dummy('pen')"  class="btn">
+                    <button class="guessButton" id="guessButton2" onclick="dummy('pen')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -111,7 +111,7 @@
                     urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
                 </div>
                 <div class="button-row">
-                    <button id="guessButton3" onclick="dummy('book')"  class="btn">
+                    <button class="guessButton" id="guessButton3" onclick="dummy('book')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -142,7 +142,7 @@
                     urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
                 </div>
                 <div class="button-row">
-                    <button id="guessButton4" onclick="dummy('scout')"  class="btn">
+                    <button class="guessButton" id="guessButton4" onclick="dummy('scout')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -173,7 +173,7 @@
                     urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
                 </div>
                 <div class="button-row">
-                    <button id="guessButton5" onclick="dummy('map')"  class="btn">
+                    <button class="guessButton" id="guessButton5" onclick="dummy('map')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -190,7 +190,7 @@
                     LOL  
                 </div>
                 <div class="button-row">
-                    <button id="guessButton6" onclick="dummy('party_plan')"  class="btn">
+                    <button class="guessButton" id="guessButton6" onclick="dummy('party_plan')"  class="btn">
                         <span>Spėti</span> 
                     </button>
                 </div>
@@ -209,6 +209,10 @@
         <!-- <source src="sound/LayLow.mp3" type="audio/mpeg"> -->
         Your browser does not support the audio element.
       </audio>
+    <script>
+    var audio = document.getElementById("myAudio");
+    audio.volume = 0.03;
+    </script>
 </body>
 
 </html>
