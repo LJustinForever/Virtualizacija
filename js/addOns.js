@@ -6,7 +6,7 @@ const wantedArray = loadFile("ats.txt").split('\r\n');
 let counter = 0;
 let guessedCounter = 0;
 let clue = "";
-const confirm = "Gerai";
+
 
 function loadFile(filePath) {
     var result = null;
@@ -72,8 +72,7 @@ function dummy(guessedItem){
                 icon: 'success',
                 title: 'You won!!!'
             }).then(() => {
-                window.history.pushState({}, document.title, window.location.pathname);
-                window.location.reload();
+                reloadPage();
             });
         }
         else{
@@ -116,8 +115,7 @@ function dummy(guessedItem){
                 title: 'Game over :(',
                 text: 'Better luck next time'
             }).then(() => {
-                window.history.pushState({}, document.title, window.location.pathname);
-                window.location.reload();
+                reloadPage();
             });
             
         }
