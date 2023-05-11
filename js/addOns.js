@@ -2,11 +2,22 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const game = urlParams.get('game');
 const guessedArray = [];
-const wantedArray = ["pen", "book", "camera"];
+const wantedArray = loadFile("ats.txt").split('\r\n');
 let counter = 0;
 let guessedCounter = 0;
 let clue = "";
 const confirm = "Gerai";
+
+function loadFile(filePath) {
+    var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+      result = xmlhttp.responseText;
+    }
+    return result;
+}
 
 function reloadPageWithGame(){
     window.history.pushState({}, document.title, window.location.pathname);
@@ -38,7 +49,7 @@ if (game == "true"){
     document.getElementById("endGameButton").style.display = "block";
     document.getElementById("gameButton").style.display = "none";
     document.getElementById("clueButton").style.display = "block";
-    for (let i = 1; i < 4; i++){
+    for (let i = 1; i < 7; i++){
         document.getElementById("guessButton"+i).style.display = "block";
     }
 }
@@ -46,7 +57,7 @@ else{
     document.getElementById("gameButton").style.display = "block";
     document.getElementById("clueButton").style.display = "none";
     document.getElementById("endGameButton").style.display = "none";
-    for (let i = 1; i < 4; i++){
+    for (let i = 1; i < 7; i++){
         document.getElementById("guessButton"+i).style.display = "none";
     }
 }
@@ -56,7 +67,7 @@ function dummy(guessedItem){
     if(guessedItem == wantedArray[guessedCounter]){
         guessedArray[guessedCounter] = guessedItem;
         guessedCounter++;
-        if(guessedCounter == 3){
+        if(guessedCounter == 4){
             Swal.fire({
                 icon: 'success',
                 title: 'You won!!!'
@@ -66,25 +77,33 @@ function dummy(guessedItem){
             });
         }
         else{
-        switch (guessedCounter){
-            case 1:
-                var second = "it is a book"
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Second clue',
-                    text: second
-                });
-                clue = second;
-                break;
-            case 2:
-                var third = "it is a camera"
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Third clue',
-                    text: third
-                });
-                clue = third;
-        }
+            switch (guessedCounter){
+                case 1:
+                    var second = "it is a book"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Second clue',
+                        text: second
+                    });
+                    clue = second;
+                    break;
+                case 2:
+                    var third = "it is a camera"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Third clue',
+                        text: third
+                    });
+                    clue = third;
+                case 3:
+                    var fourth = "it is a scout book"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Fourth clue',
+                        text: fourth
+                    });
+                    clue = fourth;
+            }
 
         }
     }

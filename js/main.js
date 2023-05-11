@@ -74,10 +74,13 @@ function addInfospotToPan(positionX, positionY, positionZ, hoverText, popup, pan
 addInfospotToPan(4662.39, -1122.05, 1393.41, "Kamera", "#popup_camera", panorama2)
 addInfospotToPan(-1529.66, -294.72, -4747.44, "Tušinukas", "#popup_pen", panorama2)
 addInfospotToPan(2490.00, 523.06, 4299.84, "Knyga", "#popup_book", panorama3)
+addInfospotToPan(-2306.66, 271.59, -4416.68, "Skautai", "#popup_scout", panorama4)
+addInfospotToPan(4693.56, -1125.68, 1274.28, "Žemėlapis", "#popup_map", panorama4)
+addInfospotToPan(-2927.14, 1081.29, -3899.07, "Vakaronės planas", "#popup_party_plan", panorama)
 
-
-const viewer = new PANOLENS.Viewer({
-  container: imageContainer,
+  
+  const viewer = new PANOLENS.Viewer({
+    container: imageContainer,
   controlBar: true,
   output: 'overlay',  
   autoHideInfospot: false
