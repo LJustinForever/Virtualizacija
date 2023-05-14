@@ -1,4 +1,4 @@
 pen
 book
 camera
-scout
+map

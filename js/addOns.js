@@ -6,6 +6,10 @@ const wantedArray = loadFile("ats.txt").split('\r\n');
 let counter = 0;
 let guessedCounter = 0;
 let clue = "";
+let firstriddle = "Moku kalbėti neištaręs nei vieno žodžio.";
+let secondriddle = "Ne krūmas, bet su lapais, ne marškiniai, bet susiūti, ne žmogus, bet šnekėti moka.";
+let thirdriddle = "Vienas momentas visam laikui įamžintas.";
+let fourthriddle = "Kur rasti upių be vandens, miestų be pastatų ir miškų be medžių?";
 
 
 function loadFile(filePath) {
@@ -32,18 +36,18 @@ function reloadPage(){
 function clueFunction(){
     Swal.fire({
         icon: '',
-        title: 'Current clue',
+        title: 'Dabartinė užuomina',
         text: clue
     });
 }
 
 
 if (game == "true"){
-    var first = "It is a pen";
+    var first = firstriddle;
     clue = first;
     setTimeout(() => {  Swal.fire({
         icon: '',
-        title: 'First clue',
+        title: 'Primoji užuomina',
         text: clue
     }); }, 1000);   
     document.getElementById("endGameButton").style.display = "block";
@@ -70,7 +74,7 @@ function dummy(guessedItem){
         if(guessedCounter == 4){
             Swal.fire({
                 icon: 'success',
-                title: 'You won!!!'
+                title: 'Laimėjote!!!'
             }).then(() => {
                 reloadPage();
             });
@@ -78,28 +82,28 @@ function dummy(guessedItem){
         else{
             switch (guessedCounter){
                 case 1:
-                    var second = "it is a book"
+                    var second = secondriddle;
                     Swal.fire({
                         icon: 'success',
-                        title: 'Second clue',
+                        title: 'Antroji užuomina',
                         text: second
                     });
                     clue = second;
                     break;
                 case 2:
-                    var third = "it is a camera"
+                    var third = thirdriddle;
                     Swal.fire({
                         icon: 'success',
-                        title: 'Third clue',
+                        title: 'Trečioji užuomina',
                         text: third
                     });
                     clue = third;
                     break;
                 case 3:
-                    var fourth = "it is a scout book"
+                    var fourth = fourthriddle;
                     Swal.fire({
                         icon: 'success',
-                        title: 'Fourth clue',
+                        title: 'Ketvirtoji užuomina',
                         text: fourth
                     });
                     clue = fourth;
@@ -112,8 +116,8 @@ function dummy(guessedItem){
         if (counter == 3){
             Swal.fire({
                 icon: 'error',
-                title: 'Game over :(',
-                text: 'Better luck next time'
+                title: 'Pralaimėjote :(',
+                text: 'Sekmės kitame bandyme'
             }).then(() => {
                 reloadPage();
             });
@@ -122,8 +126,8 @@ function dummy(guessedItem){
         else {
             Swal.fire({
                 icon: 'error',
-                title: 'Wrong guess',
-                text: 'Errors made: ' + counter
+                title: 'Neteisingas spėjimas',
+                text: 'Klaidų skaičius: ' + counter
             });
         }
     }
