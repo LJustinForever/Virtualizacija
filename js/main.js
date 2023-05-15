@@ -81,7 +81,7 @@ addInfospotToPan(-2927.14, 1081.29, -3899.07, "Vakaronės planas", "#popup_party
   
   const viewer = new PANOLENS.Viewer({
     container: imageContainer,
-  controlBar: true,
+  controlBar: false,
   output: 'overlay',  
   autoHideInfospot: false
 });

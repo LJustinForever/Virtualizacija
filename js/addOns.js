@@ -55,6 +55,7 @@ if (game == "true"){
     document.getElementById("clueButton").style.display = "block";
     for (let i = 1; i < 7; i++){
         document.getElementById("guessButton"+i).style.display = "block";
+        document.getElementById("testButton"+i).style.display = "none";
     }
 }
 else{
@@ -63,6 +64,7 @@ else{
     document.getElementById("endGameButton").style.display = "none";
     for (let i = 1; i < 7; i++){
         document.getElementById("guessButton"+i).style.display = "none";
+        document.getElementById("testButton"+i).style.display = "block";
     }
 }
 
