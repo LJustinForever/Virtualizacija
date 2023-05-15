@@ -17,23 +17,23 @@ function loadFile(filePath) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", filePath, false);
     xmlhttp.send();
-    if (xmlhttp.status==200) {
-      result = xmlhttp.responseText;
+    if (xmlhttp.status == 200) {
+        result = xmlhttp.responseText;
     }
     return result;
 }
 
-function reloadPageWithGame(){
+function reloadPageWithGame() {
     window.history.pushState({}, document.title, window.location.pathname);
     location.href = location.href + "?game=true";
 }
-  
-function reloadPage(){
+
+function reloadPage() {
     window.history.pushState({}, document.title, window.location.pathname);
     window.location.reload();
 }
 
-function clueFunction(){
+function clueFunction() {
     Swal.fire({
         icon: '',
         title: 'Dabartinė užuomina',
@@ -42,38 +42,40 @@ function clueFunction(){
 }
 
 
-if (game == "true"){
+if (game == "true") {
     var first = firstriddle;
     clue = first;
-    setTimeout(() => {  Swal.fire({
-        icon: '',
-        title: 'Primoji užuomina',
-        text: clue
-    }); }, 1000);   
+    setTimeout(() => {
+        Swal.fire({
+            icon: '',
+            title: 'Primoji užuomina',
+            text: clue
+        });
+    }, 1000);
     document.getElementById("endGameButton").style.display = "block";
     document.getElementById("gameButton").style.display = "none";
     document.getElementById("clueButton").style.display = "block";
-    for (let i = 1; i < 7; i++){
-        document.getElementById("guessButton"+i).style.display = "block";
-        document.getElementById("testButton"+i).style.display = "none";
+    for (let i = 1; i < 7; i++) {
+        document.getElementById("guessButton" + i).style.display = "block";
+        document.getElementById("testButton" + i).style.display = "none";
     }
 }
-else{
+else {
     document.getElementById("gameButton").style.display = "block";
     document.getElementById("clueButton").style.display = "none";
     document.getElementById("endGameButton").style.display = "none";
-    for (let i = 1; i < 7; i++){
-        document.getElementById("guessButton"+i).style.display = "none";
-        document.getElementById("testButton"+i).style.display = "block";
+    for (let i = 1; i < 7; i++) {
+        document.getElementById("guessButton" + i).style.display = "none";
+        document.getElementById("testButton" + i).style.display = "block";
     }
 }
 
 // this is where fun begins
-function dummy(guessedItem){
-    if(guessedItem == wantedArray[guessedCounter]){
+function dummy(guessedItem) {
+    if (guessedItem == wantedArray[guessedCounter]) {
         guessedArray[guessedCounter] = guessedItem;
         guessedCounter++;
-        if(guessedCounter == 4){
+        if (guessedCounter == 4) {
             Swal.fire({
                 icon: 'success',
                 title: 'Laimėjote!!!'
@@ -81,8 +83,8 @@ function dummy(guessedItem){
                 reloadPage();
             });
         }
-        else{
-            switch (guessedCounter){
+        else {
+            switch (guessedCounter) {
                 case 1:
                     var second = secondriddle;
                     Swal.fire({
@@ -113,9 +115,9 @@ function dummy(guessedItem){
 
         }
     }
-    else{
+    else {
         counter++;
-        if (counter == 3){
+        if (counter == 3) {
             Swal.fire({
                 icon: 'error',
                 title: 'Pralaimėjote :(',
@@ -123,7 +125,7 @@ function dummy(guessedItem){
             }).then(() => {
                 reloadPage();
             });
-            
+
         }
         else {
             Swal.fire({
@@ -133,4 +135,9 @@ function dummy(guessedItem){
             });
         }
     }
+}
+
+function do_test(test) {
+    set_question(test)
+    window.open('quiz.html', '_blank');
 }

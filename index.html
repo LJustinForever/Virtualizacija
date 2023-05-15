@@ -11,36 +11,36 @@
 </head>
 
 <body>
-    
+
     <div class="tour">
         <div class="container">
             <div class="tour__head">
                 <div class="top-nav">
                     <div class="navbar-left">
-                        <img  src="images\Lietuvos-svietimo-istorijos-muziejus.jpg" alt="XDDD">
+                        <img src="images\Lietuvos-svietimo-istorijos-muziejus.jpg" alt="XDDD">
                     </div>
                     <div class="navbar-center">
                         <h2 id="title">Lietuvos švietimo istorijos muziejus</h2>
                     </div>
                     <div class="navbar-right">
                         <button id="soundButton" onclick="toggleSound()">
-                        <span id="soundIcon" class="fa fa-volume-up fa-lg"></span> 
+                            <span id="soundIcon" class="fa fa-volume-up fa-lg"></span>
                         </button>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="image-container"></div>
             <div class="button-row">
-                <button class = "g-but" id="gameButton" onclick="reloadPageWithGame()"  class="btn">
-                    <span>Žaisti žaidimą</span> 
+                <button class="g-but" id="gameButton" onclick="reloadPageWithGame()" class="btn">
+                    <span>Žaisti žaidimą</span>
                 </button>
-                <button class = "g-but" id="endGameButton" onclick="reloadPage()"  class="btn">
-                    <span>Baigti žaidimą</span> 
+                <button class="g-but" id="endGameButton" onclick="reloadPage()" class="btn">
+                    <span>Baigti žaidimą</span>
                 </button>
-                <button class = "g-but" id="clueButton" onclick="clueFunction()"  class="btn">
-                    <span>Užuomina</span> 
+                <button class="g-but" id="clueButton" onclick="clueFunction()" class="btn">
+                    <span>Užuomina</span>
                 </button>
             </div>
         </div>
@@ -49,26 +49,30 @@
 
     <div id="popup_camera" class="overlay">
         <div class="popup">
-            <h2>Kamera</h2>
+            <h2>Epidiaskopas Triplex</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
                 <img class="image-contain" src="images\camera.jpg"></img>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
+                <div class="text">Šis epidiaskopas, pavadinimu Triplex, yra prietaisas vaizdams ir tekstams, taip pat
+                    skaidrėms projektuoti į ekraną. Prietaisas stovi ant medinio rėmo. Korpuso šone pritvirtintos dvi
+                    durelės, kurių viduryje yra nedidelis apvalus stiklas, skirtas valdyti dvi viduje sumontuotas
+                    lemputes. Jas galima viena po kitos įjungti dvejais skirtingais jungikliais. Projektoriaus viršuje
+                    priekyje sumontuotas oro kaminas, kad elektros lempučių šiluma galėtų išeiti. Objektyvas vaizdų ir
+                    tekstų projekcijai į ekraną (episkopas) yra velene, kuris perduoda sukamuosius judesius, už šio
+                    kamino. Po projekcijos įtaisu yra pakeliamasis įtaisas, kuriuo projekcijos tikslais prie įrenginio
+                    prispaudžiami knygos puslapiai, nuotraukos, atvirukai ar tekstai. Epidiaskopas yra 85cm pločio, 55cm
+                    aukščio ir 26 cm gylio. Gamintojas buvo Drezdeno įmonė Müller & Wetzig. Epidiaskopas buvo pastatytas
+                    1920 m. Produktas atsirado 1926 m. Diuseldorfo atstovo Carl Simons & Co kataloge. Carl Simon & Co -
+                    fotografijos institutas Diuseldorfe, kuris veikė 1907–2008 m., jį įkūrė Carl Simon (1873–1952).
+                    Įmonė aktyviai veikė foto industrijoje, dirbo su fotoaparatais, kinematografais ir projektoriais.
                 </div>
                 <div class="button-row">
-                    <button class="testButton" id="testButton1" onclick="something()"  class="btn">
-                        <span>Atlikti testą</span> 
+                    <button class="testButton" id="testButton1" onclick="do_test('1')" class="btn">
+                        <span>Atlikti testą</span>
                     </button>
-                    
-                    <button class="guessButton" id="guessButton1" onclick="dummy('camera')"  class="btn">
-                        <span>Spėti</span> 
+
+                    <button class="guessButton" id="guessButton1" onclick="dummy('camera')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -76,26 +80,29 @@
     </div>
     <div id="popup_pen" class="overlay">
         <div class="popup">
-            <h2>Tušinukas</h2>
+            <h2>J. Vokietaičio parkeris ir parkerio garantinis kvitas</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
                 <img class="image-contain" src="images\pen.jpg"></img>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
+                <div class="text">Nacionalinės mokyklos kūrėjo Juozo Vokietaičio (1872–1931) parkeris. Parkeris
+                    „Parker-Duofold“ priklausė dviem iškiliems Lietuvos švietimo istorijos veikėjams – Veiverių mokytojų
+                    seminarijos auklėtiniams, lietuviškos mokyklos kūrėjams, pedagogams broliams Juozui ir Antanui
+                    Vokietaičiams. Retas XX a. 2-o dešimtmečio „Parker-Duofold“ paauksuotas parkeris – mokinių ir kolegų
+                    dovana mylimam ir gerbiamam pedagogui Juozui Vokietaičiui. Šią dovaną J. Vokietaitis itin vertino.
+                    Išlikusiose fotografijose J. Vokietaitis tiek oficialiuose renginiuose, tiek meninėse nuotraukose
+                    įamžintas su šiuo parkeriu. Po J. Vokietaičio mirties parkerį naudojo jo brolis pedagogas Antanas
+                    Vokietaitis (1877–1950).<br>
+                    Šie parkeriai išsiskirdavo kokybės ir ilgaamžiškumu, todėl jiems buvo duodama net dvidešimt penkerių
+                    metų garantija ir jeigu parkeris sugestų, tas asmuo, kuris turi šią parkerio garantiją gali jį
+                    pasikeisti. Šis parkeris buvo pagamintas iš kietos juodos gumos bei aukso paauksavimo, kuris yra
+                    labai gražaus dizaino.
                 </div>
                 <div class="button-row">
-                    <button class="testButton" id="testButton2" onclick="something()"  class="btn">
-                        <span>Atlikti testą</span> 
+                    <button class="testButton" id="testButton2" onclick="do_test('2')" class="btn">
+                        <span>Atlikti testą</span>
                     </button>
-                    
-                    <button class="guessButton" id="guessButton2" onclick="dummy('pen')"  class="btn">
-                        <span>Spėti</span> 
+                    <button class="guessButton" id="guessButton2" onclick="dummy('pen')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -103,35 +110,29 @@
     </div>
     <div id="popup_book" class="overlay">
         <div class="popup">
-            <h2>Knyga</h2>
+            <h2>J. Bičiūnas “Angelaičių vadas” 1936 m. ir vaikų sąjungos “Angelas Sargas” ženklelis</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
                 <img class="image-contain" src="images\book.jpg"></img>
-                <iframe id="book-video" src="https://www.youtube.com/embed/1YWYY4PtUCI?&mute=1"></iframe>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
+                <div class="text">
+                    Jonas Bičiūnas savo gyvenimą, kuris truko nuo 1908 m. birželio 24 d. iki 1975 m. balandžio 6 d.,
+                    skyrė tikėjimui ir tikėjimo mokymui, buvo Lietuvos katalikų kunigas, o jo veikalų temos apima vaikų
+                    auklėjimą. Vienas iš J. Bičiūno kūrinių – 1936 metais išleista grožinio žanro knyga “Angelaičių
+                    vadas”. Šios knygos priešistorė prasidėjo 1921 m., kai vaikams buvo įkurta Angelo Sargo sąjunga,
+                    kurios narius, vadinamus angelaičiais, globojo Lietuvos katalių blaivybės draugija. Tikslas buvo
+                    vaikams iki 12 m. amžiaus įdiegti tvirtą tikėjimą, tėvynės meilę, dorus papročius, blaivybės jausmą.
+                    Sąjunga turėjo padalinius visose parapijose ir iš viso buvo apie 60 000 narių. Per sąjungai
+                    priklausantį žurnalą “Žvaigždutė” Katalikų bažnyčia rūpinosi mokyklinio amžiaus vaikų religiniu
+                    auklėjimu bei švietimu. Aukščiau esančios nuotraukos dešinėje pusėje matomas šios sąjungos
+                    ženklelis. Angelo Sargo sąjungos veikla baigėsi 1940 m.
                 </div>
                 <div class="button-row">
-                    <button class="testButton" id="testButton3" onclick="something()"  class="btn">
-                        <span>Atlikti testą</span> 
+                    <button class="testButton" id="testButton3" onclick="do_test('3')" class="btn">
+                        <span>Atlikti testą</span>
                     </button>
-                    
-                    <button class="guessButton" id="guessButton3" onclick="dummy('book')"  class="btn">
-                        <span>Spėti</span> 
+
+                    <button class="guessButton" id="guessButton3" onclick="dummy('book')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -139,34 +140,60 @@
     </div>
     <div id="popup_scout" class="overlay">
         <div class="popup">
-            <h2>Skautai</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <img class="image-contain" src="images\scout.jpg"></img>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
+                <img class="image-contain" src="images\Skautai2.jpg"></img>
+                <div class="text">
+                    Skautų ženkleliai yra skiriamieji, jie rodo nario priklausymą atskiroms šakoms ar draugovėms.
+                    Pavyzdžiui, priklausymą jūrų skautams parodo lelijėlė, sujungta su inkaru. Buvo gaminami proginiai
+                    ir suvenyriniai ženkleliai, o jų gamybai daugiausia naudotas vario lydinys. Skautų atributikoje –
+                    aprangoje, vėliavose, ženkleliuose – buvo naudojamas pagrindinis skautų ženklas – stilizuota
+                    lelijėlė. Šis ženklas simbolizuoja skauto patikimumą, skautiškų idealų gerbimą ir kelio rodymą
+                    kitiems.<br><br>
+                    1. Ženklelis skirtas jubiliejinei skautų stovyklai - kuri vyko Aukštosios Panemunės šile, 1938
+                    metais.
                 </div>
-                <button class="testButton" id="testButton4" onclick="something()"  class="btn">
-                    <span>Atlikti testą</span> 
+                <img class="image-contain" src="images\Skautai3.jpg"></img>
+                <div class="text">
+                    2. Suvenyriniai ženkleliai gaminti iš skaidraus gintaro – tai skautų tuntininkų ir vyriausiojo štabo
+                    narių ženkleliai, skaučių ženklelis „Rūtelė“, skautų sąskrydžio, vykusio 1933 m. pasaulinės skautų
+                    sąjungos įkūrėjo R. Baden-Powellio apsilankymo Palangoje proga, ženkleliai.
+                </div>
+                <img class="image-contain" src="images\Skautai4.jpg"></img>
+                <div class="text">
+                    3. Skautai turėjo savo vėliavas ir ženkliukus, kurių išvaizda buvo keista ne vieną kartą. 1930 m.
+                    priimtame Lietuvos skautų brolijos statute matome naujos išvaizdos skautų ženklelį - trys surišti
+                    lelijos lapeliai, kurių viduriniajame yra dvigubas kryžius ir lapelių apačioje kaspinėlis su užrašu
+                    ,,Budėk’’. Šie ženkleliai buvo vadinami lelijėlėmis.
+                </div>
+                <img class="image-contain" src="images\Skautai5.jpg"></img>
+                <div class="text">
+                    4. 1934 m. vilkiukus ir paukštytes pervadinus į jaunesniuosius skautus, buvo parengtas ir naujų
+                    ženklelių projektas - paukštytė-tulpė apskritime. Projektas buvo priimtas 1934 m. rugpjūčio 29 d.
+                    posėdyje, o 1934 m. rugsėjo 15 d. posėdyje buvo patvirtintas metalinio ženklelio pavyzdys ir nutarta
+                    pagaminti geltonus (bronzinius) visiems ir baltus (sidabrinius) ženklelius vadams. Pirmieji
+                    ženkleliai buvo pagaminti 1935 m. pradžioje.
+                </div>
+                <img class="image-contain" src="images\Skautai6.jpg"></img>
+                <div class="text">
+                    <b>Jaunųjų ūkininkų ratelio nario knygelė.</b><br>
+                    Ši knygelė buvo pagaminta 1937 m. Jos viršelyje galime matyti jaunųjų ūkininkų ratelio logotipą -
+                    apskritimą, kuriame pavaizduotas stilizuotas dobilas ir organizacijos pavadinimo trumpinys - JŪR.
+
+                    Jaunųjų ūkininkų rateliai veikė 1929–1944 m. (su pertrauka 1940–1941 m.), veikla atnaujinta nuo 1989
+                    m. Jų tikslas - mokyti jaunimą žemės ūkio mokslų pagrindais pagrįsto ūkininkavimo, rūpintis
+                    kultūriniu jaunimo auklėjimu, ugdyti patriotizmą. Pirmasis jaunųjų ūkininkų ratelis įkurtas 1929 m.
+                    Kubiliūnų kaime. 1936 m. jaunųjų ūkininkų rateliai buvo sujungti į Jaunųjų ūkininkų ratelių sąjungą
+                    (JŪRS), ją globojo Lietuvos prezidentas A. Smetona.
+                </div>
+                <img class="image-contain" src="images\Skautai1.jpg"></img>
+                <button class="testButton" id="testButton4" onclick="do_test('4')" class="btn">
+                    <span>Atlikti testą</span>
                 </button>
-                
+
                 <div class="button-row">
-                    <button class="guessButton" id="guessButton4" onclick="dummy('scout')"  class="btn">
-                        <span>Spėti</span> 
+                    <button class="guessButton" id="guessButton4" onclick="dummy('scout')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -174,34 +201,29 @@
     </div>
     <div id="popup_map" class="overlay">
         <div class="popup">
-            <h2>Žemėlapis</h2>
+            <h2>,,Lietuvių ir latvių žemė“</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
                 <img class="image-contain" src="images\map.jpg"></img>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec justo ac eros
-                    tincidunt malesuada. Sed ultricies, erat id faucibus faucibus, turpis justo consequat elit, vitae
-                    laoreet justo libero sit amet nulla. Nunc feugiat dui sit amet justo tempor fringilla. Donec ornare
-                    suscipit dolor, vel viverra ex dignissim ac. Nunc non magna erat. Vestibulum malesuada feugiat enim.
-                    Ut consectetur id lorem sed ultrices. Integer venenatis interdum sem at dignissim. Phasellus laoreet
-                    ut sapien eget sodales. Sed volutpat nulla sed risus feugiat fringilla. Maecenas quis lorem id lacus
-                    vestibulum feugiat. Curabitur sed est in libero ornare porta. Integer tellus ante, malesuada vel
-                    urna vel, ullamcorper mattis quam. Sed elit arcu, varius a elementum sit amet, commodo et augue.    
+                <div class="text">,,Lietuvių ir latvių žemė“ - tai yra pirmasis Lietuvoje reljefo modelis. Šio modelio
+                    autorius – prof. Povilas Matulionis (1860–1932). Jis yra senosios kartos miškininkas, miško mokslų
+                    Lietuvoje pradininkas, vienos iš aukštųjų mokyklų įkūrėjas, pirmasis Žemės ūkio akademijos
+                    (dabartinio Aleksandro Stulginskio universiteto) rektorius.
+                    Reljefo modelis ,,Lietuvių ir latvių žemė“ 1922 metais buvo išlietas iš gipso „Vilijos“ fabrike,
+                    Smolenske. Modelio dydis – 45×49 centimetrai, kurių plote matomos atvaizduotos lietuvių ir latvių
+                    istorinės žemės ir jų pakraščiai. Pažymėti 88 miestai. Įbrėžtos kartografinio tinklelio žymos ir
+                    reikšmės. Vaizduojamos kalvos, svarbiausios upės. Kalvų ir upių pavadinimai, objektų aukštis virš
+                    jūros lygio pateikiami reljefo modeliui aprašyti skirtoje to paties pavadinimo knygoje „Lietuvių ir
+                    latvių žemė“. Jūros teritorijoje dugno reljefas nėra išskiriamas. Reljefo modelio horizontalusis
+                    mastelis – 1:1 260 000, vertikalusis – 1:10 000.
                 </div>
                 <div class="button-row">
-                    <button class="testButton" id="testButton5" onclick="something()"  class="btn">
-                        <span>Atlikti testą</span> 
+                    <button class="testButton" id="testButton5" onclick="do_test('5')" class="btn">
+                        <span>Atlikti testą</span>
                     </button>
-                    
-                    <button class="guessButton" id="guessButton5" onclick="dummy('map')"  class="btn">
-                        <span>Spėti</span> 
+
+                    <button class="guessButton" id="guessButton5" onclick="dummy('map')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -214,57 +236,42 @@
             <div class="content">
                 <img class="image-contain" src="images\party_plan.jpg"></img>
                 <div class="text">
-                    Vakaronės (vakarotuvės) - valstiečių paprotys iš eilės rinktis vakarais pas kurį nors kaimyną kartu to paties darbo dirbti (megzti, verpti, plunksnų plėšyti, pančių vyti). 
-                    Kuriai nors kaimo merginai rengiantis tekėti kitos per vakarones padėdavo išausti juostų dovanoms, pasiūti marškinių jaunajam. 
-                    Vakarotojai dirbdami dainuodavo, sekdavo pasakas, mindavo mįsles, žaisdavo. 19 amžiaus pabaigoje dar būdavo vakarojama visoje Lietuvoje. 
-                    Tose vietose, kur kaimai išsiskirstė į vienkiemius, vakaronės išnyko anksčiausiai, Pietryčių Lietuvos kaimuose vakaronių paprotys išliko iki 20 amžiaus ketvirtojo dešimtmečio.
-                    <!-- Kaip dar buvo vadinamos vakaronės? (pirms)
-                    vakarotuvės
-                    naktinės
-                    vakarienės
-                    vestuvės
-
-                    Ką veikdavo vakarotojai dirbdami per vakarones? (visi)
-                    dainuodavo
-                    sekdavo pasakas
-                    mindavo mįsles
-                    žaisdavo   -->
+                    Vakaronės (vakarotuvės) - valstiečių paprotys iš eilės rinktis vakarais pas kurį nors kaimyną kartu
+                    to paties darbo dirbti (megzti, verpti, plunksnų plėšyti, pančių vyti).
+                    Kuriai nors kaimo merginai rengiantis tekėti kitos per vakarones padėdavo išausti juostų dovanoms,
+                    pasiūti marškinių jaunajam.
+                    Vakarotojai dirbdami dainuodavo, sekdavo pasakas, mindavo mįsles, žaisdavo. 19 amžiaus pabaigoje dar
+                    būdavo vakarojama visoje Lietuvoje.
+                    Tose vietose, kur kaimai išsiskirstė į vienkiemius, vakaronės išnyko anksčiausiai, Pietryčių
+                    Lietuvos kaimuose vakaronių paprotys išliko iki 20 amžiaus ketvirtojo dešimtmečio.
                 </div>
                 <figure>
                     <figcaption>Kur bėga Šešupė:</figcaption>
-                    <audio
-                        controls
-                        src="sound/sesupe.mp3">
+                    <audio controls src="sound/sesupe.mp3">
                     </audio>
                 </figure>
                 <figure>
                     <figcaption>Ant kalno karklai</figcaption>
-                    <audio
-                        controls
-                        src="sound/karklai.mp3">
+                    <audio controls src="sound/karklai.mp3">
                     </audio>
                 </figure>
                 <figure>
                     <figcaption>Lėk sakalėli</figcaption>
-                    <audio
-                        controls
-                        src="sound/sakalas.mp3">
+                    <audio controls src="sound/sakalas.mp3">
                     </audio>
                 </figure>
                 <figure>
                     <figcaption>Sveiki broliai dainininkai</figcaption>
-                    <audio
-                        controls
-                        src="sound/broliai.mp3">
+                    <audio controls src="sound/broliai.mp3">
                     </audio>
                 </figure>
                 <div class="button-row">
-                    <button class="testButton" id="testButton6" onclick="something()"  class="btn">
-                        <span>Atlikti testą</span> 
+                    <button class="testButton" id="testButton6" onclick="do_test('6')" class="btn">
+                        <span>Atlikti testą</span>
                     </button>
 
-                    <button class="guessButton" id="guessButton6" onclick="dummy('party_plan')"  class="btn">
-                        <span>Spėti</span> 
+                    <button class="guessButton" id="guessButton6" onclick="dummy('party_plan')" class="btn">
+                        <span>Spėti</span>
                     </button>
                 </div>
             </div>
@@ -274,17 +281,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
     <script src="./js/panolens.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/questions.js"></script>
     <script src="./js/addOns.js"></script>
-    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
     <audio id="myAudio" controls loop>
         <!-- <source src="sound/Calm-and-Peaceful.mp3" type="audio/mpeg"> -->
         <source src="sound/LayLow.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+    </audio>
     <script>
-    var audio = document.getElementById("myAudio");
-    audio.volume = 0.03;
+        var audio = document.getElementById("myAudio");
+        audio.volume = 0.03;
     </script>
 </body>
 

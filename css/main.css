@@ -30,7 +30,7 @@ h2 {
 }
 
 .image-container {
-  height: 40rem;
+  height: 50rem;
   position: relative;
   width: 78%;
   display: block;
@@ -209,4 +209,10 @@ iframe {
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.button-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
