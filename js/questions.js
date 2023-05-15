@@ -165,7 +165,7 @@ function set_question(which_q) {
         },
         {
           numb: 2,
-          question: "Ką veikdavo vakarotojai dirbdami per vakarones?",
+          question: "Ką veikdavo vakarotojai per vakarones?",
           answer: "dainuodavo",
           options: [
             "dainuodavo",
