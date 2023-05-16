@@ -48,7 +48,7 @@ if (game == "true") {
     setTimeout(() => {
         Swal.fire({
             icon: '',
-            title: 'Primoji užuomina',
+            title: 'Pirmoji užuomina',
             text: clue
         });
     }, 1000);
